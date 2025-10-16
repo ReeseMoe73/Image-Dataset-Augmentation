@@ -1,0 +1,41 @@
+Python: 3.8+
+
+Library: Pillow
+ (pip install pillow)
+
+OS: Windows/macOS/Linux (paths default to a Windows OneDrive folder, but can be overridden via CLI)
+
+  Key Capabilities
+
+Recursive ingestion of common image formats: .bmp, .jpeg, .jpg, .png, .tif, .tiff, .webp.
+
+Color-safe I/O:
+
+PNG (RGBA/LA) → composited onto a white RGB canvas.
+
+JPEG writes forced to RGB (no accidental CMYK/RGBA saves).
+
+Deterministic augmentations (8 variants per image):
+
+Horizontal flip, vertical flip
+
+Rotate 90°, rotate 270°
+
+Brightness ×1.50, contrast ×1.50, sharpness ×1.50
+
+Blur (Pillow’s ImageFilter.BLUR)
+
+File-type preservation: writes augmented files using the same extension as the source (with format-appropriate encoder options—e.g., JPEG quality=95 + optimize).
+
+Safe default outputs: Originals are copied (optional), augments saved alongside them in the derived output tree. 
+
+augment_ds
+
+  INSTALLATION
+  python -m venv .venv
+# Windows
+.venv\Scripts\activate
+# macOS/Linux
+source .venv/bin/activate
+
+pip install pillow
