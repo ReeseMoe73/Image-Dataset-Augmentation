@@ -1,2 +1,2 @@
 # Image-Dataset-Augmentation
-a Python script that will takes any image dataset and augments it in some way to expand the dataset.
+A lightweight, deterministic image–augmentation utility that walks an input folder (recursively), copies your originals (optional), and writes a fixed set of augmented variants per image to an output folder—preserving file types and sensible color modes.
